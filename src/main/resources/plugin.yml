@@ -1,0 +1,7 @@
+name: StaffReport
+author: Leog_04
+version: 1.0
+main: eu.xgp.staffreport.spigot.Main
+commands:
+  report:
+  ss:

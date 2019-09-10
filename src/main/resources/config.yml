@@ -1,0 +1,3 @@
+messages:
+  spigot:
+    reported_player: server=this%nplayer=as%nreason=asdasd%n{"click"="/ss %reported","hover"="teleport %reported","text"="Teleport %reported"}
