@@ -1,6 +1,6 @@
 name: StaffReport
 author: Leog_04
-version: 1.0
+version: 1.0.1
 main: eu.xgp.staffreport.spigot.Main
 commands:
   report:

@@ -1,7 +1,7 @@
 messages:
   spigot:
     screenshare_status: '&cHey, give your data to %staff'
-    reported_player: '&6World: &b%world%n&6Reporter: &b%reporter%n&6Reason: %reason%n{"click"="/ss %reported","hover"="&5teleport &4%reported","text"="Teleport %reported"}'
+    reported_player: '&6World: &b%world%n&6Reporter: &b%reporter%n&6Reason: %reason%n{"click":"/ss %reported","hover":"&5teleport &4%reported","text":"Teleport %reported"}'
     report_usage: '&cUsage: /report <player> <reason>'
     ss_usage: '&cUsage: /ss <player>'
     only_players: '&cOnly players can execute this command!'
