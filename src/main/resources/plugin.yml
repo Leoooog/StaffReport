@@ -4,4 +4,14 @@ version: 1.0
 main: eu.xgp.staffreport.spigot.Main
 commands:
   report:
+    description: Reports the player to the server staff
   ss:
+    aliases:
+      - screenshare
+    description: Teleports the player to screenshare location
+  staffreport:
+    description: Shows the menu
+  sslocation:
+    aliases:
+      - ssloc
+    description: Sets screenshare location

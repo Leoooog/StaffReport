@@ -1,3 +1,46 @@
 messages:
   spigot:
-    reported_player: server=this%nplayer=as%nreason=asdasd%n{"click"="/ss %reported","hover"="teleport %reported","text"="Teleport %reported"}
+    screenshare_status: '&cHey, give your data to %staff'
+    reported_player: '&6World: &b%world%n&6Reporter: &b%reporter%n&6Reason: %reason%n{"click"="/ss %reported","hover"="&5teleport &4%reported","text"="Teleport %reported"}'
+    report_usage: '&cUsage: /report <player> <reason>'
+    ss_usage: '&cUsage: /ss <player>'
+    only_players: '&cOnly players can execute this command!'
+    player_not_online: '&cPlayer &4''%offline'' &cis not online.'
+    no_permission: '&cYou can''t execute this command'
+    location_saved: '&aLocation saved!'
+  bungee:
+    screenshare_status: '&cHey, give your data to %staff'
+    reported_player: '&6Server: &b%server%n&6Reporter: &b%reporter%n&6Reason: %reason%n{"click"="/ss %reported","hover"="&5teleport &4%reported","text"="Teleport %reported"}'
+    report_usage: '&cUsage: /report <player> <reason>'
+    ss_usage: '&cUsage: /ss <player>'
+    only_players: '&cOnly players can execute this command!'
+    player_not_online: '&cPlayer &4''%offline'' &cis not online.'
+    no_permission: '&cYou can''t execute this command'
+    server_saved: '&aServer saved!'
+settings:
+  spigot:
+    title:
+      enabled: true
+      text: '&6Screenshare'
+      stay: 100
+      fadein: 20
+      fadeout: 20
+    subtitle:
+      enabled: true
+      text: '&cGive your data to &4%staff'
+      stay: 100
+      fadein: 20
+      fadeout: 20
+  bungee:
+    title:
+      enabled: true
+      text: '&6Screensharef'
+      stay: 100
+      fadein: 20
+      fadeout: 20
+    subtitle:
+      enabled: true
+      text: '&cGive your data to %staff'
+      stay: 100
+      fadein: 20
+      fadeout: 20

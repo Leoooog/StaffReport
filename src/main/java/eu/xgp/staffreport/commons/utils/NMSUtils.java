@@ -1,4 +1,4 @@
-package eu.xgp.staffreport.spigot.utils;
+package eu.xgp.staffreport.commons.utils;
 
 import org.bukkit.Bukkit;
 import org.bukkit.entity.Player;
@@ -16,7 +16,7 @@ public class NMSUtils {
             Method chatMethod = chatClass.getDeclaredClasses()[0].getMethod("a", String.class);
 
             Object titleEnum = enumTitleAction.getField(enumTitle).get(null);
-            Object titleChatComponent = chatMethod.invoke(null,"{\"text\": \"" + text + "\"}");
+            Object titleChatComponent = chatMethod.invoke(null, "{\"text\": \"" + text + "\"}");
 
             Constructor<?> tConstructur = titleClass.getConstructor(enumTitleAction, chatClass, int.class, int.class, int.class);
             Object titlePacket = tConstructur.newInstance(titleEnum, titleChatComponent, stay, fadeIn, fadeOut);

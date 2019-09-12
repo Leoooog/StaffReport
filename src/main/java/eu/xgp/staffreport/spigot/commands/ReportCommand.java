@@ -3,7 +3,7 @@ package eu.xgp.staffreport.spigot.commands;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 import eu.xgp.staffreport.spigot.Main;
-import eu.xgp.staffreport.spigot.utils.MessageUtils;
+import eu.xgp.staffreport.spigot.utils.SpigotMessageUtils;
 import net.md_5.bungee.api.chat.ClickEvent;
 import net.md_5.bungee.api.chat.ComponentBuilder;
 import net.md_5.bungee.api.chat.HoverEvent;
@@ -21,14 +21,14 @@ import java.util.List;
 
 public class ReportCommand implements CommandExecutor, TabExecutor {
     private String message;
-    private Main plugin = Main.getInstance();
-    private MessageUtils msg = Main.getMessageUtils();
+    private SpigotMessageUtils msg;
 
     @Override
-    public boolean onCommand(CommandSender commandSender, Command command, String s, String[] args) {
-        if (commandSender instanceof Player) {
-            Player p = (Player) commandSender;
-            if (commandSender.hasPermission("staffreport.report")) {
+    public boolean onCommand(CommandSender sender, Command command, String s, String[] args) {
+        msg = Main.getInstance().getMessageUtils();
+        if (sender instanceof Player) {
+            Player p = (Player) sender;
+            if (sender.hasPermission("staffreport.report")) {
                 if (args.length != 2) {
                     message = msg.reportUsageMessage();
                     p.sendMessage(message);
@@ -61,15 +61,15 @@ public class ReportCommand implements CommandExecutor, TabExecutor {
                         } catch (Exception e) {
                             e.printStackTrace();
                         }
-                    } else if(line != "" || line != null){
-                        if(lines.indexOf(line) != 0)
+                    } else if (line != "" || line != null) {
+                        if (lines.indexOf(line) != 0)
                             messageText.addExtra("\n");
                         messageText.addExtra(line);
                     }
                 }
                 for (Player staff : Bukkit.getOnlinePlayers()) {
                     if (staff.hasPermission("staffreport.see")) {
-                            staff.spigot().sendMessage(messageText);
+                        staff.spigot().sendMessage(messageText);
                     }
                 }
                 return true;
@@ -81,14 +81,14 @@ public class ReportCommand implements CommandExecutor, TabExecutor {
             }
         } else {
             message = msg.onlyPlayerMessage();
-            commandSender.sendMessage(message);
+            sender.sendMessage(message);
             return false;
         }
     }
 
     @Override
-    public List<String> onTabComplete(CommandSender commandSender, Command command, String s, String[] args) {
-        if (!commandSender.hasPermission("staffreport.report")) return new ArrayList<>();
+    public List<String> onTabComplete(CommandSender sender, Command command, String s, String[] args) {
+        if (!sender.hasPermission("staffreport.report")) return new ArrayList<>();
         List<String> match = new ArrayList<>();
         if (args.length == 1) {
             String regex = args[0].toLowerCase();
