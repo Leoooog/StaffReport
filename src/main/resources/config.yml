@@ -8,6 +8,7 @@ messages:
     player_not_online: '&cPlayer &4''%offline'' &cis not online.'
     no_permission: '&cYou can''t execute this command'
     location_saved: '&aLocation saved!'
+    you_reported: '&aYou reported &c''%reported'' &afor &c''%reason'''
   bungee:
     screenshare_status: '&cHey, give your data to %staff'
     reported_player: '&6Server: &b%server%n&6Reporter: &b%reporter%n&6Reason: %reason%n{"click"="/ss %reported","hover"="&5teleport &4%reported","text"="Teleport %reported"}'
@@ -17,6 +18,7 @@ messages:
     player_not_online: '&cPlayer &4''%offline'' &cis not online.'
     no_permission: '&cYou can''t execute this command'
     server_saved: '&aServer saved!'
+    you_reported: '&aYou reported &c''%reported'' &afor &c''%reason'''
 settings:
   spigot:
     title:
@@ -34,7 +36,7 @@ settings:
   bungee:
     title:
       enabled: true
-      text: '&6Screensharef'
+      text: '&6Screenshare'
       stay: 100
       fadein: 20
       fadeout: 20

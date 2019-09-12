@@ -45,14 +45,13 @@ public class ReportCommand extends Command implements TabExecutor {
                     p.sendMessage(message);
                     return;
                 }
-                String toFormat = msg.reportedPlayerMessage(p.getName(), target.getName(), args[1], p.getServer().getInfo().getName());
+                String toFormat = msg.reportedPlayerMessage(p.getName(), target.getName(), p.getServer().getInfo().getName(), args[1]);
                 List<String> lines = Arrays.asList(toFormat.split("\n"));
                 TextComponent messageText = new TextComponent();
                 TextComponent clickMessage = new TextComponent();
                 for (String line : lines) {
                     if (line.contains("{") && line.contains("}")) {
                         String toParse = line.split("\\{")[1].split("}")[0];
-                        System.out.println(toParse);
                         JsonParser parser = new JsonParser();
                         JsonObject obj = parser.parse("{" + toParse + "}").getAsJsonObject();
                         try {
@@ -77,6 +76,8 @@ public class ReportCommand extends Command implements TabExecutor {
                         staff.sendMessage(messageText);
                     }
                 }
+                message = new TextComponent(msg.youReportedMessage(target.getName(), args[1]));
+                p.sendMessage(message);
 
             } else {
                 message = new TextComponent(msg.noPermMessage());

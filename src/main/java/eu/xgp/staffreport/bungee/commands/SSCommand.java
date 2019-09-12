@@ -17,7 +17,7 @@ import java.util.Set;
 
 public class SSCommand extends Command implements TabExecutor {
     public SSCommand(String ss) {
-        super(ss);
+        super(ss, "", "screenshare");
     }
 
     private BungeeMessageUtils msg;

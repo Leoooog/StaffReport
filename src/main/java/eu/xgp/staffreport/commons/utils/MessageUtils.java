@@ -13,4 +13,6 @@ public interface MessageUtils extends FUtils {
     String reportUsageMessage();
 
     String ssStatusMessage(String staff);
+
+    String youReportedMessage(String reported, String reason);
 }

@@ -43,6 +43,11 @@ public class BungeeMessageUtils implements MessageUtils {
         return format(config.getString("screenshare_status").replaceAll("%staff", staff));
     }
 
+    @Override
+    public String youReportedMessage(String reported, String reason) {
+        return format(config.getString("you_reported")).replaceAll("%reported", reported).replaceAll("%reason", reason);
+    }
+
     public String reportedPlayerMessage(String reporter, String reported, String server, String reason) {
         return format(config.getString("reported_player").replaceAll("%reporter", reporter).replaceAll("%reported", reported).replaceAll("%reason", reason).replaceAll("%server", server));
     }

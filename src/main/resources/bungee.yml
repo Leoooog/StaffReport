@@ -2,13 +2,3 @@ name: StaffReport
 author: Leog_04
 version: 1.0
 main: eu.xgp.staffreport.bungee.Main
-commands:
-  report:
-    permission: staffreport.report
-    description: Reports the player to the server staff
-  ss:
-    permission: staffreport.ss
-    description: Teleports the player to screenshare world
-  staffreport:
-    permission: staffreport.help
-    description: Shows the menun

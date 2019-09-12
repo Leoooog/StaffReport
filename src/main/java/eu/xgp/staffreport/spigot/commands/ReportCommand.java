@@ -72,8 +72,8 @@ public class ReportCommand implements CommandExecutor, TabExecutor {
                         staff.spigot().sendMessage(messageText);
                     }
                 }
+                p.sendMessage(msg.youReportedMessage(target.getName(), args[1]));
                 return true;
-
             } else {
                 message = msg.noPermMessage();
                 p.sendMessage(message);

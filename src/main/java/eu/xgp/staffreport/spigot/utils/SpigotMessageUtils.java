@@ -46,6 +46,11 @@ public class SpigotMessageUtils implements MessageUtils {
     }
 
     @Override
+    public String youReportedMessage(String reported, String reason) {
+        return format(config.getString("you_reported")).replaceAll("%reported", reported).replaceAll("%reason", reason);
+    }
+
+    @Override
     public String ssStatusMessage(String staff) {
         return format(config.getString("screenshare_status")).replaceAll("%staff", staff);
     }
